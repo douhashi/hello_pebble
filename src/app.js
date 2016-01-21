@@ -6,6 +6,8 @@
 
 var UI = require('ui');
 var Vector2 = require('vector2');
+var Vibe = require('ui/vibe');
+
 
 var main = new UI.Card({
   title: 'Pebble.js',
@@ -19,6 +21,7 @@ var main = new UI.Card({
 main.show();
 
 main.on('click', 'up', function(e) {
+  Vibe.vibrate('long');
   var menu = new UI.Menu({
     sections: [{
       items: [{
